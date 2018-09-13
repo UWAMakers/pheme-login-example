@@ -23,7 +23,7 @@ Examples are available in the following languages:
 
 ## How to use the endpoint
 
-**If you are using this endpoint, please do not store the users password in your database.**
+**If you are using this endpoint, you MUST NOT store the users password in your database.**
 
 Pretty simple:
 
