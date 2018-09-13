@@ -8,6 +8,13 @@ cool things and eventually innovate.
 As a result, Makers provides an open endpoint to validate pheme credentials that abstracts the actual process. 
 However, we will **not** release the code for the endpoint itself.
 
+## Registering 
+
+At some point in the near(ish) future, we will implement a registration requirement in order to use this api, 
+it would most likely be a simple case of logging in to get an api key, and then passing that key with every request.
+
+Watch this repo to get notified when this happens.
+
 ## Examples
 
 Examples are available in the following languages:
@@ -59,3 +66,9 @@ That's it!
 
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a4b924ff31c6aec3b62c)
+
+## ToDo
+The following are things planned 
+
+  - [ ] Add API registration
+  - [ ] Support student card login/registering
