@@ -10,10 +10,24 @@ However, we will **not** release the code for the endpoint itself.
 
 ## Registering 
 
-At some point in the near(ish) future, we will implement a registration requirement in order to use this api, 
-it would most likely be a simple case of logging in to get an api key, and then passing that key with every request.
+You need to register for an API token for your project in order to use this api, simply:
+1. Go to https://auth.uwamakers.com and login with your pheme. 
+2. From the main menu, click `+` to add a new application
+3. Give it a name.
+4. Click `Add`. (You should see the new API key listed)
+5. Click the copy button to copy the token.
 
-Watch this repo to get notified when this happens.
+The API token can either be passed through as `token` in the request body, or in the Authorization header (https://<API_Token>@auth.uwamakers.com). 
+
+You should create a new token for each application you create.
+
+**DO NOT COMMIT THE TOKEN TO GITHUB!!!** (use something like [dotenv](https://github.com/motdotla/dotenv).)
+
+## Rate Limiting
+
+Whilst the endpoint does employ rate limiting, it does so based on your entire application, not per user. If someone tries to brute force through your application, it will prevent others from using it.
+
+TLDR: You should employ your own rate limiting inside your app.
 
 ## Examples
 
@@ -31,7 +45,8 @@ Pretty simple:
     ```json
     {
       "user": "12345678",
-      "pass": "SuperSecretPassword"
+      "pass": "SuperSecretPassword",
+      "token": "abc123"
     }
     ```
 2. Send the request to `https://auth.makeuwa.com/api/login`
@@ -65,10 +80,10 @@ Pretty simple:
 That's it!
 
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/a4b924ff31c6aec3b62c)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/81dc1e750afff5cc3774)
 
 ## ToDo
 The following are things planned 
 
-  - [ ] Add API registration
+  - [x] Add API registration
   - [ ] Support student card login/registering
