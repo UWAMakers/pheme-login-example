@@ -62,4 +62,4 @@ typings/
 
 #custom
 .idea
-examples/node/package-lock.json
+package-lock.json

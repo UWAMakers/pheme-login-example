@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/UWAMakers/pheme-login-example#readme",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "inquirer": "^6.2.0",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.5"

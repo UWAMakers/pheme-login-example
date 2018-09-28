@@ -1,13 +1,18 @@
 const inquirer = require('inquirer');
 const request = require('request-promise-native');
+//read in the .env file to use as env variables https://github.com/motdotla/dotenv
+require('dotenv').config();
 
-const loginRequest = (user, pass) => {
+const loginRequest = (user, pass, token) => {
+    if(!token) token = process.env.API_TOKEN;
+    
     const options = {
         method: 'POST',
         uri: 'https://auth.makeuwa.com/api/login',
         body: {
             user: user,
-            pass: pass
+            pass: pass,
+            token: token
         },
         json: true,
     };
@@ -30,12 +35,17 @@ const askForLogin = async ()=>{
             type: 'password',
             message: 'What is your UWA Pheme password?',
         },
+        {
+            name: 'token',
+            type: 'password',
+            message: 'What is your API Token? (process.env.API_TOKEN)',
+        },
     ];
 
-    const {user, pass} = await inquirer.prompt(promptSchema);
+    let {user, pass, token} = await inquirer.prompt(promptSchema);
 
     //send the details and get the result
-    const result = await loginRequest(user, pass);
+    const result = await loginRequest(user, pass, token);
 
     if(result.success === false) {
         console.error(`There was a problem logging you in: ${result.message}`);
