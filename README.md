@@ -8,6 +8,8 @@ cool things and eventually innovate.
 As a result, Makers provides an open endpoint to validate pheme credentials that abstracts the actual process. 
 However, we will **not** release the code for the endpoint itself.
 
+#### [API Docs](https://uwasystemhealth.github.io/pheme-auth/)
+
 ## Registering 
 
 You need to register for an API token for your project in order to use this api, simply:
