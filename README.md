@@ -61,10 +61,10 @@ Pretty simple:
             "success": true,
             "user": {
                 "username": "12345678",
-                "mail": "12345678@student.uwa.edu.au",
+                "email": "12345678@student.uwa.edu.au",
                 "fullname": "Jo Smith",
                 "firstname": "Jo",
-                "surname": "Smith"
+                "lastname": "Smith"
             }
         }
         ```
