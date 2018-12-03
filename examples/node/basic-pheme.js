@@ -8,7 +8,7 @@ const loginRequest = (user, pass, token) => {
     
     const options = {
         method: 'POST',
-        uri: 'https://auth.makeuwa.com/api/login',
+        uri: 'https://auth.uwamakers.com/api/login',
         body: {
             user: user,
             pass: pass,
